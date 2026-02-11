@@ -20,10 +20,14 @@
 
   .contact-card {
     background-color: #1a1a1a;
-    border: none;
-    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(255, 255, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .contact-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 255, 0, 0.4);
   }
 
   .contact-card input,
@@ -75,7 +79,7 @@
   </div>
 </nav>
 
-<!-- Contact Section -->
+<!-- Contact Form Section -->
 <section class="py-5">
   <div class="container text-center">
     <h1 class="mb-4">Get in Touch</h1>
@@ -83,22 +87,28 @@
 
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <div class="contact-card">
+        <div class="contact-card p-4">
 
-          <!-- Contact Form -->
-          <form>
+          <!-- Formspree Form -->
+          <form action="https://formspree.io/f/xvzbzrrz" method="POST">
+            <!-- Redirect after submit -->
+            <input type="hidden" name="_next" value="thankyou.html">
+
             <div class="mb-3 text-start">
               <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
             </div>
+
             <div class="mb-3 text-start">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
             </div>
+
             <div class="mb-3 text-start">
               <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Your message…"></textarea>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message…" required></textarea>
             </div>
+
             <button type="submit" class="btn btn-warning w-100">Send Message</button>
           </form>
 
