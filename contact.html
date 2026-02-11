@@ -20,41 +20,67 @@
 
   .contact-card {
     background-color: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(255, 193, 7, 0.25);
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeUp 0.8s ease;
   }
 
   .contact-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(255, 255, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.45);
   }
 
-  .contact-card input,
-  .contact-card textarea {
+  .form-control {
     background-color: #222;
     border: 1px solid #444;
     color: white;
-    border-radius: 5px;
   }
 
-  .contact-card input:focus,
-  .contact-card textarea:focus {
-    outline: none;
+  .form-control:focus {
+    background-color: #222;
+    color: white;
     border-color: #ffc107;
-    box-shadow: 0 0 5px #ffc107;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+  }
+
+  .form-control:valid {
+    border-color: #198754;
+    box-shadow: 0 0 8px rgba(25, 135, 84, 0.5);
+  }
+
+  .form-control:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc3545;
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5);
+  }
+
+  label {
+    color: #ccc;
   }
 
   .btn-warning {
+    font-size: 1.1rem;
     transition: 0.3s;
   }
 
   .btn-warning:hover {
     background-color: #ffaa00;
+    transform: translateY(-2px);
   }
 
   footer {
     background-color: black;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
 </head>
@@ -79,37 +105,69 @@
   </div>
 </nav>
 
-<!-- Contact Form Section -->
+<!-- Contact Section -->
 <section class="py-5">
   <div class="container text-center">
-    <h1 class="mb-4">Get in Touch</h1>
+    <h1 class="mb-3">Get in Touch</h1>
     <h2 class="section-title mb-5">We’d Love to Hear From You</h2>
 
     <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="contact-card p-4">
+      <div class="col-md-8 col-lg-6">
+        <div class="contact-card p-4 p-md-5">
 
-          <!-- Formspree Form -->
-          <form action="https://formspree.io/f/xvzbzrrz" method="POST">
-            <!-- Redirect after submit -->
+          <form action="https://formspree.io/f/xvzbzrrz"
+                method="POST"
+                class="needs-validation"
+                novalidate>
+
             <input type="hidden" name="_next" value="thankyou.html">
 
-            <div class="mb-3 text-start">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            <!-- Name -->
+            <div class="form-floating mb-3">
+              <input type="text"
+                     class="form-control"
+                     id="name"
+                     name="name"
+                     placeholder="Your Name"
+                     required>
+              <label for="name">👤 Your Name</label>
+              <div class="invalid-feedback">
+                Please enter your name.
+              </div>
             </div>
 
-            <div class="mb-3 text-start">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+            <!-- Email -->
+            <div class="form-floating mb-3">
+              <input type="email"
+                     class="form-control"
+                     id="email"
+                     name="email"
+                     placeholder="you@example.com"
+                     required
+                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+              <label for="email">📧 Email Address</label>
+              <div class="invalid-feedback">
+                Enter a valid email (example@domain.com).
+              </div>
             </div>
 
-            <div class="mb-3 text-start">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message…" required></textarea>
+            <!-- Message -->
+            <div class="form-floating mb-4">
+              <textarea class="form-control"
+                        id="message"
+                        name="message"
+                        placeholder="Your message"
+                        style="height: 140px"
+                        required></textarea>
+              <label for="message">💬 Your Message</label>
+              <div class="invalid-feedback">
+                Message cannot be empty.
+              </div>
             </div>
 
-            <button type="submit" class="btn btn-warning w-100">Send Message</button>
+            <button type="submit" class="btn btn-warning w-100 fw-bold py-2">
+              🚀 Send Message
+            </button>
           </form>
 
         </div>
@@ -118,14 +176,14 @@
   </div>
 </section>
 
-<!-- Contact Info Section -->
+<!-- Contact Info -->
 <section class="py-5 bg-dark text-center">
   <div class="container">
     <h2 class="section-title mb-4">Visit or Call Us</h2>
-    <p>123 Flavor Street</p>
-    <p>Open Daily: 11AM - 10PM</p>
-    <p>Phone: (555) 123-4567</p>
-    <p>Email: info@bigpappysrestraunt.org</p>
+    <p>📍 123 Flavor Street</p>
+    <p>🕒 Open Daily: 11AM – 10PM</p>
+    <p>📞 Phone: (555) 123-4567</p>
+    <p>📧 Email: info@bigpappysrestraunt.org</p>
   </div>
 </section>
 
@@ -136,6 +194,24 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap Validation Script -->
+<script>
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
 
 </body>
 </html>
