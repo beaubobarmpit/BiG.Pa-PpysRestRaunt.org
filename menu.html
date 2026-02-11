@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BiG Pa'Ppys RestRaunt</title>
+<title>BiG Pa'Ppys RestRaunt Menu</title>
 
 <!-- Bootstrap 5 CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,26 +36,46 @@
     box-shadow: 0 8px 20px rgba(255, 255, 0, 0.5);
   }
 
-  footer {
-    background-color: black;
+  /* Specialties (creepy vibe) */
+  .specialties {
+    background-color: #220000;
+  }
+
+  .special-card {
+    background-color: #330000;
+    border: 1px solid #ff0000;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+  }
+
+  .special-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+    filter: brightness(1.2);
+  }
+
+  .special-card h4 {
+    color: #ff4444;
+  }
+
+  .special-card p {
+    color: #ff9999;
   }
 </style>
 </head>
-
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">BiG Pa'Ppys</a>
+    <a class="navbar-brand fw-bold" href="index.html">BiG Pa'Ppys</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Menu</a></li>
         <li class="nav-item"><a class="nav-link" href="#">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
       </ul>
@@ -70,8 +90,6 @@
     <h2 class="section-title mb-5">Customer Favorites</h2>
 
     <div class="row g-4">
-
-      <!-- Burger -->
       <div class="col-md-4">
         <div class="card text-white p-3">
           <img src="burger.jpg" alt="Pa'Ppy Burger">
@@ -81,8 +99,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Placeholder for Fries -->
       <div class="col-md-4">
         <div class="card text-white p-3">
           <img src="LoadedFries.jpg" alt="Loaded Fries">
@@ -92,8 +108,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Placeholder for Shake -->
       <div class="col-md-4">
         <div class="card text-white p-3">
           <img src="StrawberryShake.jpg" alt="Strawberry Shake">
@@ -103,18 +117,45 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- Visit Section -->
-<section class="bg-dark py-5 text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">Visit Us</h2>
-    <p>123 Flavor Street</p>
-    <p>Open Daily: 11AM - 10PM</p>
-    <p>Call: (555) 123-4567</p>
+<!-- Specialties Section (Subtle Creepy Vibe) -->
+<section class="specialties py-5">
+  <div class="container text-center">
+    <h1 class="mb-4">Chef’s Specialties</h1>
+    <h2 class="section-title mb-5 text-danger">Something Different...</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-white special-card p-3">
+          <img src="stew.jpg" alt="Crimson Stew">
+          <div class="card-body">
+            <h4 class="card-title">Crimson Stew</h4>
+            <p class="card-text">A rich blend of flavors… you’ll never forget it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white special-card p-3">
+          <img src="pie.jpg" alt="Midnight Pie">
+          <div class="card-body">
+            <h4 class="card-title">Midnight Pie</h4>
+            <p class="card-text">Deliciously dark, slightly… suspicious?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white special-card p-3">
+          <img src="icecream.jpg" alt="Shadow Ice Cream">
+          <div class="card-body">
+            <h4 class="card-title">Shadow Ice Cream</h4>
+            <p class="card-text">Cool and creamy… something’s lurking beneath.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
