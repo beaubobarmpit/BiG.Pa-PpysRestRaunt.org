@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About BiG Pa'Ppys RestRaunt</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #111;
+    color: white;
+  }
+
+  .section-title {
+    color: #ffc107;
+  }
+
+  .card {
+    background-color: #1a1a1a;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(255, 255, 0, 0.5);
+  }
+
+  .special-card {
+    background-color: #330000;
+    border: 1px solid #ff0000;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+  }
+
+  .special-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+    filter: brightness(1.2);
+  }
+
+  .card img {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    background-color: black;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">BiG Pa'Ppys</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h1 class="mb-4">About BiG Pa'Ppys RestRaunt</h1>
+    <h2 class="section-title mb-5">Our Story</h2>
+
+    <p class="mb-4">Started over a decade ago, BiG Pa'Ppys has been serving hearty meals to families who crave bold flavors. Every dish is made with love… and a little bit of mystery.</p>
+    
+    <p class="mb-4">We believe in big portions, unforgettable taste, and experiences that stay with you. Some guests have said our specialties leave a lasting impression… but don’t worry, it’s all part of the charm.</p>
+  </div>
+</section>
+
+<!-- Team / Chefs Section -->
+<section class="py-5 bg-dark">
+  <div class="container text-center">
+    <h2 class="section-title mb-5">Meet the Chefs</h2>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card text-white p-3">
+          <img src="chef1.jpg" alt="Chef Pappy">
+          <div class="card-body">
+            <h4 class="card-title text-warning">Chef Pappy</h4>
+            <p class="card-text">Master of flavors and keeper of secrets in the kitchen.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white p-3">
+          <img src="chef2.jpg" alt="Sous Chef">
+          <div class="card-body">
+            <h4 class="card-title text-warning">Sous Chef</h4>
+            <p class="card-text">Ensures every dish is cooked perfectly… and sometimes surprises guests.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="section-title mb-4">Contact Us</h2>
+    <p>123 Flavor Street</p>
+    <p>Open Daily: 11AM - 10PM</p>
+    <p>Call: (555) 123-4567</p>
+    <p>Email: info@bigpappysrestraunt.org</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-secondary py-3">
+  © 2026 BiG Pa'Ppys RestRaunt
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
